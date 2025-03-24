@@ -2,25 +2,28 @@
 
 using namespace std;
 
-float sum(float n1, float n2)
+int main() 
 {
-    cout << "число 1: "; cin >> n1;
-    cout << "число 2: "; cin >> n2;
-    return n1 + n2;
-}
-float raz(float n1, float n2)
-{
-    cout << "Первое число: " << endl; cin >> n1;
-    cout << "Второе число: " << endl; cin >> n2;
-    return n1 - n2;
-}
-
-int main() {
-    float a;
-    float b;
-    cout << sum(a, b) << " Sum" << endl;
-    cout << raz(a, b) << " Raz" << endl;
-
-
-    return 0;
+    int n, col, x;
+    cin >> n;
+    while(n > 1000)
+    {
+        cout << "Input n <= 1000" << endl;
+        cin >> n;
+    }
+    col = 0;
+    for(int i = 1; i <= n; i++)
+    {
+        cin >> x;
+        while(x > 30000)
+        {
+            cout << "Input x <= 30000" << endl;
+            cin >> x;
+        }
+        if(x % 3 == 0)
+        {
+            col = col + 1;
+        }
+    }
+    cout << col << endl;
 }
